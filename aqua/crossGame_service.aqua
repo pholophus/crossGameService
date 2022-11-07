@@ -1,0 +1,24 @@
+import "@fluencelabs/aqua-lib/builtin.aqua" 
+
+data NFTDetail:
+    contractAddress: string
+    tokenId: string
+
+data NFTs:
+    length: u32
+    nft: []NFTDetail
+
+data Weapons: 
+    length: u32
+    weapon: []string
+
+service ICrossGameService("crossgameservice"):
+    readMetadata(contractAddress: string, tokenId: string) -> string
+    updateCharacter(walletAddress: string, weapon: string)
+    registration(walletAddress: string)
+    buyWeapon(walletAddress: string, weapon: string) -> bool
+    -- useWeapon(walletAddress: string, weapon: string)
+    getCurrentWeapon(walletAddress: string) -> string
+    getInventory(walletAddress: string) -> Weapons
+
+    

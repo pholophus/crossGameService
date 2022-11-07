@@ -1,0 +1,30 @@
+{
+  "name": "crossgameservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx aqua -i ./aqua/ -o ./src/_aqua",
+    "start": "node -r ts-node/register index.ts",
+    "serve": "npm run build && npm run start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fluencelabs/fluence": "^0.27.0",
+    "@fluencelabs/fluence-network-environment": "^1.0.13",
+    "api": "^4.5.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^4.11.0",
+    "socket.io": "^4.5.3",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@fluencelabs/aqua": "^0.7.5-342",
+    "@fluencelabs/aqua-lib": "^0.6.0",
+    "chokidar-cli": "^3.0.0",
+    "typescript": "^4.8.4"
+  }
+}
